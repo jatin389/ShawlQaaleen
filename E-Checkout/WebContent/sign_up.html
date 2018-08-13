@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="sign_up.css">
+    </head>
+    <body>
+        <style>
+body
+ { margin: 0; padding: 0; 
+  
+background-image: url("sign_up.jpg");
+ no-repeat center center fixed;
+ webkit-background-size: cover;
+ moz-background-size: cover; 
+o-background-size: cover; 
+background-size: cover; 
+
+}. 
+
+</style>
+
+
+<center>
+    <table border="0" cellspacing="10" cellpadding="0" >
+                        <tr>
+                        <td width="206" height="50" align="center" style="
+                        font-family:'Raleway', Georgia, serif; 
+                        font-size:14px;  
+                        font-size:28px; 
+                        color:#ffffff; 
+                        display:block;
+                        vertical-align:middle;
+                        font-weight:700; 
+                        -webkit-text-size-adjust: none; 
+                        letter-spacing:1px;
+                        background-color:rgba(0,0,0,0.6)
+                        ">
+                        <font face="'Raleway', Arial, Helvetica, sans-serif">
+                        <a target="_blank" style="color:#ffffff; text-decoration:none; display:inline-block; width:100%; line-height:150px;">Register Here</a>
+                        </font>
+                            </td>
+        </tr>
+        </table>
+ </center>                           
+        
+        
+  <!-- -----------------------------------------------form --------------------------------- -->
+  
+        <form name="signup" id="msform" action="SignUp" method="post" onsubmit="return match()">
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Create your account</h2>
+       <h3 class="fs-subtitle">We will never sell it</h3>
+       
+       
+       
+       
+       
+    <input type="text" name="c_name" placeholder="Name" required/>
+    <input type="text" name="c_phone" placeholder="Phone"  required/>
+    <textarea name="c_address" placeholder="Address" required></textarea>
+    <input type="email" name="c_email" placeholder="Email" required/>
+    <input type="password" name="c_pass" placeholder="Password" required/>
+    <input type="password" name="cpass" placeholder="Confirm Password" required/>
+              <input type="submit" name="submit" class="submit action-button" value="Submit" /><br/>
+<a href="cust_login.html" target="_self">Already a user?</a>
+      </fieldset>
+
+   
+    
+</form>
+        
+        <script type="text/javascript">
+            function match(){
+                
+                
+                if(chkphone()){
+                var first=document.signup.c_pass.value;
+                var second=document.signup.cpass.value;
+                
+                if(first==second)
+                    return true;
+                else
+                    {
+                    alert("password must be same");
+                    return false;
+                    }
+                }
+                else
+                    return false;
+            }
+        
+            
+            function chkphone()
+            {
+                var x=document.signup.c_phone.value;
+                if(isNaN(x)){
+                    alert("phone number must be numeric");
+                    return false;
+                }
+                else
+                    return true;
+            }
+        </script>
+        
+    </body>
+</html>
+<!-- multistep form -->
